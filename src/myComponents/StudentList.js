@@ -20,7 +20,7 @@ const StudentList = () => {
 
     useEffect(() => {
         getAllStudents();
-    }, [])
+    }, [Studs])
 
     return (
         <div className="StudentList">
