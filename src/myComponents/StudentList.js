@@ -7,17 +7,18 @@ const StudentList = () => {
 
     const [Studs, setStuds] = useState([]);
 
-    useEffect(() => {
-        async function getAllStudents() {
-            try {
-                const students = await axios.get('http://localhost:3333/students')
-                console.log("fetching db.json");
-                setStuds(students.data);
-            }
-            catch (error) {
-                console.log(error);
-            }
+    async function getAllStudents() {
+        try {
+            const students = await axios.get('http://localhost:3333/students')
+            // console.log("fetching db.json");
+            setStuds(students.data);
         }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
         getAllStudents();
     }, [])
 
