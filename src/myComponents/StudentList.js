@@ -20,7 +20,7 @@ const StudentList = () => {
 
     useEffect(() => {
         getAllStudents();
-    }, [Studs])
+    }, [])   //Studs creating a problem ... axios.get run in exponential 
 
     return (
         <div className="StudentList">
